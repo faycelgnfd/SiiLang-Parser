@@ -1,4 +1,4 @@
-// Generated from C:/Users/Dell/IdeaProjects/Tiny_SII/src\grammaire.g4 by ANTLR 4.9
+// Generated from C:/Users/Dell/OneDrive/Bureau/LKSC/USTHB/S7/Compile/Projet/SiiLang-Parser/src\Tiny_SII.g4 by ANTLR 4.9
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class grammaireParser extends Parser {
+public class Tiny_SIIParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.9", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -17,10 +17,10 @@ public class grammaireParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, T__10=11, T__11=12, T__12=13, PROGID=14, ID=15, OPERATEUR=16, 
-		WS=17, WHATEVER=18, NBR=19, COM=20, COMLIGNES=21, Start=22, Compil=23, 
-		IntCompil=24, FloatCompil=25, StringCompil=26, If=27, Then=28, Else=29, 
-		Do=30, While=31, ScanCompile=32, PrintCompil=33;
+		T__9=10, T__10=11, T__11=12, PROGID=13, ID=14, OPERATEUR=15, WS=16, WHATEVER=17, 
+		NBR=18, COM=19, COMLIGNES=20, Start=21, Compil=22, IntCompil=23, FloatCompil=24, 
+		StringCompil=25, If=26, Then=27, Else=28, Do=29, While=30, ScanCompile=31, 
+		PrintCompil=32;
 	public static final int
 		RULE_operande = 0, RULE_comparateur = 1, RULE_expression = 2, RULE_comparaison = 3, 
 		RULE_affect = 4, RULE_decvar = 5, RULE_dakhel = 6, RULE_si = 7, RULE_tantque = 8, 
@@ -38,16 +38,16 @@ public class grammaireParser extends Parser {
 	private static String[] makeLiteralNames() {
 		return new String[] {
 			null, "'.'", "'<'", "'>'", "'=='", "'!='", "';'", "'='", "'('", "')'", 
-			"'{'", "'}'", "','", "'Compil'"
+			"'{'", "'}'", "','"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, "PROGID", "ID", "OPERATEUR", "WS", "WHATEVER", "NBR", "COM", 
-			"COMLIGNES", "Start", "Compil", "IntCompil", "FloatCompil", "StringCompil", 
-			"If", "Then", "Else", "Do", "While", "ScanCompile", "PrintCompil"
+			null, "PROGID", "ID", "OPERATEUR", "WS", "WHATEVER", "NBR", "COM", "COMLIGNES", 
+			"Start", "Compil", "IntCompil", "FloatCompil", "StringCompil", "If", 
+			"Then", "Else", "Do", "While", "ScanCompile", "PrintCompil"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -85,7 +85,7 @@ public class grammaireParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "grammaire.g4"; }
+	public String getGrammarFileName() { return "Tiny_SII.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -96,32 +96,32 @@ public class grammaireParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public grammaireParser(TokenStream input) {
+	public Tiny_SIIParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	public static class OperandeContext extends ParserRuleContext {
-		public List<TerminalNode> NBR() { return getTokens(grammaireParser.NBR); }
+		public List<TerminalNode> NBR() { return getTokens(Tiny_SIIParser.NBR); }
 		public TerminalNode NBR(int i) {
-			return getToken(grammaireParser.NBR, i);
+			return getToken(Tiny_SIIParser.NBR, i);
 		}
-		public TerminalNode ID() { return getToken(grammaireParser.ID, 0); }
+		public TerminalNode ID() { return getToken(Tiny_SIIParser.ID, 0); }
 		public OperandeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_operande; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterOperande(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterOperande(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitOperande(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitOperande(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitOperande(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitOperande(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -178,15 +178,15 @@ public class grammaireParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_comparateur; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterComparateur(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterComparateur(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitComparateur(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitComparateur(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitComparateur(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitComparateur(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -228,22 +228,22 @@ public class grammaireParser extends Parser {
 		public OperandeContext operande(int i) {
 			return getRuleContext(OperandeContext.class,i);
 		}
-		public TerminalNode OPERATEUR() { return getToken(grammaireParser.OPERATEUR, 0); }
+		public TerminalNode OPERATEUR() { return getToken(Tiny_SIIParser.OPERATEUR, 0); }
 		public ExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterExpression(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitExpression(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitExpression(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -291,15 +291,15 @@ public class grammaireParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_comparaison; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterComparaison(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterComparaison(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitComparaison(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitComparaison(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitComparaison(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitComparaison(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -332,7 +332,7 @@ public class grammaireParser extends Parser {
 	}
 
 	public static class AffectContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(grammaireParser.ID, 0); }
+		public TerminalNode ID() { return getToken(Tiny_SIIParser.ID, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
@@ -345,15 +345,15 @@ public class grammaireParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_affect; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterAffect(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterAffect(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitAffect(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitAffect(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitAffect(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitAffect(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -405,29 +405,29 @@ public class grammaireParser extends Parser {
 	}
 
 	public static class DecvarContext extends ParserRuleContext {
-		public TerminalNode IntCompil() { return getToken(grammaireParser.IntCompil, 0); }
-		public TerminalNode ID() { return getToken(grammaireParser.ID, 0); }
+		public TerminalNode IntCompil() { return getToken(Tiny_SIIParser.IntCompil, 0); }
+		public TerminalNode ID() { return getToken(Tiny_SIIParser.ID, 0); }
 		public DecvarContext decvar() {
 			return getRuleContext(DecvarContext.class,0);
 		}
-		public TerminalNode FloatCompil() { return getToken(grammaireParser.FloatCompil, 0); }
-		public TerminalNode StringCompil() { return getToken(grammaireParser.StringCompil, 0); }
-		public TerminalNode EOF() { return getToken(grammaireParser.EOF, 0); }
+		public TerminalNode FloatCompil() { return getToken(Tiny_SIIParser.FloatCompil, 0); }
+		public TerminalNode StringCompil() { return getToken(Tiny_SIIParser.StringCompil, 0); }
+		public TerminalNode EOF() { return getToken(Tiny_SIIParser.EOF, 0); }
 		public DecvarContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_decvar; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterDecvar(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterDecvar(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitDecvar(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitDecvar(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitDecvar(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitDecvar(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -510,22 +510,22 @@ public class grammaireParser extends Parser {
 		public AffectContext affect() {
 			return getRuleContext(AffectContext.class,0);
 		}
-		public TerminalNode EOF() { return getToken(grammaireParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(Tiny_SIIParser.EOF, 0); }
 		public DakhelContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_dakhel; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterDakhel(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterDakhel(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitDakhel(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitDakhel(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitDakhel(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitDakhel(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -576,11 +576,11 @@ public class grammaireParser extends Parser {
 	}
 
 	public static class SiContext extends ParserRuleContext {
-		public TerminalNode If() { return getToken(grammaireParser.If, 0); }
+		public TerminalNode If() { return getToken(Tiny_SIIParser.If, 0); }
 		public ComparaisonContext comparaison() {
 			return getRuleContext(ComparaisonContext.class,0);
 		}
-		public TerminalNode Then() { return getToken(grammaireParser.Then, 0); }
+		public TerminalNode Then() { return getToken(Tiny_SIIParser.Then, 0); }
 		public List<DakhelContext> dakhel() {
 			return getRuleContexts(DakhelContext.class);
 		}
@@ -593,23 +593,23 @@ public class grammaireParser extends Parser {
 		public SiContext si(int i) {
 			return getRuleContext(SiContext.class,i);
 		}
-		public TerminalNode Else() { return getToken(grammaireParser.Else, 0); }
-		public TerminalNode EOF() { return getToken(grammaireParser.EOF, 0); }
+		public TerminalNode Else() { return getToken(Tiny_SIIParser.Else, 0); }
+		public TerminalNode EOF() { return getToken(Tiny_SIIParser.EOF, 0); }
 		public SiContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_si; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterSi(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterSi(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitSi(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitSi(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitSi(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitSi(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -698,11 +698,11 @@ public class grammaireParser extends Parser {
 	}
 
 	public static class TantqueContext extends ParserRuleContext {
-		public TerminalNode Do() { return getToken(grammaireParser.Do, 0); }
+		public TerminalNode Do() { return getToken(Tiny_SIIParser.Do, 0); }
 		public DakhelContext dakhel() {
 			return getRuleContext(DakhelContext.class,0);
 		}
-		public TerminalNode While() { return getToken(grammaireParser.While, 0); }
+		public TerminalNode While() { return getToken(Tiny_SIIParser.While, 0); }
 		public ComparaisonContext comparaison() {
 			return getRuleContext(ComparaisonContext.class,0);
 		}
@@ -712,22 +712,22 @@ public class grammaireParser extends Parser {
 		public TantqueContext tantque() {
 			return getRuleContext(TantqueContext.class,0);
 		}
-		public TerminalNode EOF() { return getToken(grammaireParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(Tiny_SIIParser.EOF, 0); }
 		public TantqueContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_tantque; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterTantque(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterTantque(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitTantque(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitTantque(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitTantque(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitTantque(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -827,7 +827,7 @@ public class grammaireParser extends Parser {
 	}
 
 	public static class DakhellectureContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(grammaireParser.ID, 0); }
+		public TerminalNode ID() { return getToken(Tiny_SIIParser.ID, 0); }
 		public DakhellectureContext dakhellecture() {
 			return getRuleContext(DakhellectureContext.class,0);
 		}
@@ -837,15 +837,15 @@ public class grammaireParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dakhellecture; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterDakhellecture(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterDakhellecture(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitDakhellecture(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitDakhellecture(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitDakhellecture(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitDakhellecture(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -889,7 +889,7 @@ public class grammaireParser extends Parser {
 	}
 
 	public static class LectureContext extends ParserRuleContext {
-		public TerminalNode ScanCompile() { return getToken(grammaireParser.ScanCompile, 0); }
+		public TerminalNode ScanCompile() { return getToken(Tiny_SIIParser.ScanCompile, 0); }
 		public DakhellectureContext dakhellecture() {
 			return getRuleContext(DakhellectureContext.class,0);
 		}
@@ -899,15 +899,15 @@ public class grammaireParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_lecture; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterLecture(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterLecture(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitLecture(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitLecture(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitLecture(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitLecture(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -942,23 +942,23 @@ public class grammaireParser extends Parser {
 	}
 
 	public static class DakhelecritureContext extends ParserRuleContext {
-		public TerminalNode WHATEVER() { return getToken(grammaireParser.WHATEVER, 0); }
-		public TerminalNode ID() { return getToken(grammaireParser.ID, 0); }
+		public TerminalNode WHATEVER() { return getToken(Tiny_SIIParser.WHATEVER, 0); }
+		public TerminalNode ID() { return getToken(Tiny_SIIParser.ID, 0); }
 		public DakhelecritureContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_dakhelecriture; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterDakhelecriture(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterDakhelecriture(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitDakhelecriture(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitDakhelecriture(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitDakhelecriture(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitDakhelecriture(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -994,7 +994,7 @@ public class grammaireParser extends Parser {
 	}
 
 	public static class EcritureContext extends ParserRuleContext {
-		public TerminalNode PrintCompil() { return getToken(grammaireParser.PrintCompil, 0); }
+		public TerminalNode PrintCompil() { return getToken(Tiny_SIIParser.PrintCompil, 0); }
 		public DakhelecritureContext dakhelecriture() {
 			return getRuleContext(DakhelecritureContext.class,0);
 		}
@@ -1004,15 +1004,15 @@ public class grammaireParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_ecriture; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterEcriture(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterEcriture(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitEcriture(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitEcriture(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitEcriture(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitEcriture(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1065,22 +1065,22 @@ public class grammaireParser extends Parser {
 		public TantqueContext tantque() {
 			return getRuleContext(TantqueContext.class,0);
 		}
-		public TerminalNode EOF() { return getToken(grammaireParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(Tiny_SIIParser.EOF, 0); }
 		public InstructionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_instruction; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterInstruction(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterInstruction(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitInstruction(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitInstruction(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitInstruction(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitInstruction(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1158,11 +1158,12 @@ public class grammaireParser extends Parser {
 	}
 
 	public static class ProgrammeContext extends ParserRuleContext {
-		public TerminalNode PROGID() { return getToken(grammaireParser.PROGID, 0); }
+		public TerminalNode Compil() { return getToken(Tiny_SIIParser.Compil, 0); }
+		public TerminalNode PROGID() { return getToken(Tiny_SIIParser.PROGID, 0); }
 		public DecvarContext decvar() {
 			return getRuleContext(DecvarContext.class,0);
 		}
-		public TerminalNode Start() { return getToken(grammaireParser.Start, 0); }
+		public TerminalNode Start() { return getToken(Tiny_SIIParser.Start, 0); }
 		public InstructionContext instruction() {
 			return getRuleContext(InstructionContext.class,0);
 		}
@@ -1172,15 +1173,15 @@ public class grammaireParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_programme; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).enterProgramme(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).enterProgramme(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof grammaireListener ) ((grammaireListener)listener).exitProgramme(this);
+			if ( listener instanceof Tiny_SIIListener ) ((Tiny_SIIListener)listener).exitProgramme(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof grammaireVisitor ) return ((grammaireVisitor<? extends T>)visitor).visitProgramme(this);
+			if ( visitor instanceof Tiny_SIIVisitor ) return ((Tiny_SIIVisitor<? extends T>)visitor).visitProgramme(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1192,7 +1193,7 @@ public class grammaireParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(183);
-			match(T__12);
+			match(Compil);
 			setState(184);
 			match(PROGID);
 			setState(185);
@@ -1219,7 +1220,7 @@ public class grammaireParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3#\u00c2\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\"\u00c2\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\3\2\3\2\3\2\3\2\3\2"+
 		"\5\2&\n\2\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5\3\6\3\6\3\6"+
@@ -1232,48 +1233,48 @@ public class grammaireParser extends Parser {
 		"\3\f\3\f\3\f\3\f\3\f\3\f\3\r\3\r\3\16\3\16\3\16\3\16\3\16\3\16\3\17\3"+
 		"\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3"+
 		"\17\5\17\u00b8\n\17\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\2\2\21"+
-		"\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36\2\4\3\2\4\7\4\2\21\21\24\24\2"+
+		"\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36\2\4\3\2\4\7\4\2\20\20\23\23\2"+
 		"\u00c5\2%\3\2\2\2\4\'\3\2\2\2\6)\3\2\2\2\b.\3\2\2\2\n=\3\2\2\2\fL\3\2"+
 		"\2\2\16U\3\2\2\2\20q\3\2\2\2\22\u0091\3\2\2\2\24\u0097\3\2\2\2\26\u0099"+
 		"\3\2\2\2\30\u009f\3\2\2\2\32\u00a1\3\2\2\2\34\u00b7\3\2\2\2\36\u00b9\3"+
-		"\2\2\2 &\7\25\2\2!\"\7\25\2\2\"#\7\3\2\2#&\7\25\2\2$&\7\21\2\2% \3\2\2"+
+		"\2\2\2 &\7\24\2\2!\"\7\24\2\2\"#\7\3\2\2#&\7\24\2\2$&\7\20\2\2% \3\2\2"+
 		"\2%!\3\2\2\2%$\3\2\2\2&\3\3\2\2\2\'(\t\2\2\2(\5\3\2\2\2)*\5\2\2\2*+\7"+
-		"\22\2\2+,\5\2\2\2,-\7\b\2\2-\7\3\2\2\2./\5\2\2\2/\60\5\4\3\2\60\61\5\2"+
-		"\2\2\61\62\7\b\2\2\62\t\3\2\2\2\63\64\7\21\2\2\64\65\7\t\2\2\65\66\5\6"+
-		"\4\2\66\67\7\b\2\2\67>\3\2\2\289\7\21\2\29:\7\t\2\2:;\5\2\2\2;<\7\b\2"+
-		"\2<>\3\2\2\2=\63\3\2\2\2=8\3\2\2\2>\13\3\2\2\2?@\7\32\2\2@A\7\21\2\2A"+
-		"B\7\b\2\2BM\5\f\7\2CD\7\33\2\2DE\7\21\2\2EF\7\b\2\2FM\5\f\7\2GH\7\34\2"+
-		"\2HI\7\21\2\2IJ\7\b\2\2JM\5\f\7\2KM\7\2\2\3L?\3\2\2\2LC\3\2\2\2LG\3\2"+
+		"\21\2\2+,\5\2\2\2,-\7\b\2\2-\7\3\2\2\2./\5\2\2\2/\60\5\4\3\2\60\61\5\2"+
+		"\2\2\61\62\7\b\2\2\62\t\3\2\2\2\63\64\7\20\2\2\64\65\7\t\2\2\65\66\5\6"+
+		"\4\2\66\67\7\b\2\2\67>\3\2\2\289\7\20\2\29:\7\t\2\2:;\5\2\2\2;<\7\b\2"+
+		"\2<>\3\2\2\2=\63\3\2\2\2=8\3\2\2\2>\13\3\2\2\2?@\7\31\2\2@A\7\20\2\2A"+
+		"B\7\b\2\2BM\5\f\7\2CD\7\32\2\2DE\7\20\2\2EF\7\b\2\2FM\5\f\7\2GH\7\33\2"+
+		"\2HI\7\20\2\2IJ\7\b\2\2JM\5\f\7\2KM\7\2\2\3L?\3\2\2\2LC\3\2\2\2LG\3\2"+
 		"\2\2LK\3\2\2\2M\r\3\2\2\2NO\5\6\4\2OP\5\16\b\2PV\3\2\2\2QR\5\n\6\2RS\5"+
 		"\16\b\2SV\3\2\2\2TV\7\2\2\3UN\3\2\2\2UQ\3\2\2\2UT\3\2\2\2V\17\3\2\2\2"+
-		"WX\7\35\2\2XY\7\n\2\2YZ\5\b\5\2Z[\7\13\2\2[\\\7\36\2\2\\]\7\f\2\2]^\5"+
-		"\16\b\2^_\5\20\t\2_`\7\r\2\2`r\3\2\2\2ab\7\35\2\2bc\7\n\2\2cd\5\b\5\2"+
-		"de\7\13\2\2ef\7\36\2\2fg\7\f\2\2gh\5\16\b\2hi\5\20\t\2ij\7\r\2\2jk\7\37"+
+		"WX\7\34\2\2XY\7\n\2\2YZ\5\b\5\2Z[\7\13\2\2[\\\7\35\2\2\\]\7\f\2\2]^\5"+
+		"\16\b\2^_\5\20\t\2_`\7\r\2\2`r\3\2\2\2ab\7\34\2\2bc\7\n\2\2cd\5\b\5\2"+
+		"de\7\13\2\2ef\7\35\2\2fg\7\f\2\2gh\5\16\b\2hi\5\20\t\2ij\7\r\2\2jk\7\36"+
 		"\2\2kl\7\f\2\2lm\5\16\b\2mn\5\20\t\2no\7\r\2\2or\3\2\2\2pr\7\2\2\3qW\3"+
-		"\2\2\2qa\3\2\2\2qp\3\2\2\2r\21\3\2\2\2st\7 \2\2tu\7\f\2\2uv\5\16\b\2v"+
-		"w\7\r\2\2wx\7!\2\2xy\7\n\2\2yz\5\b\5\2z{\7\13\2\2{\u0092\3\2\2\2|}\7 "+
-		"\2\2}~\7\f\2\2~\177\5\16\b\2\177\u0080\5\20\t\2\u0080\u0081\7\r\2\2\u0081"+
-		"\u0082\7!\2\2\u0082\u0083\7\n\2\2\u0083\u0084\5\b\5\2\u0084\u0085\7\13"+
-		"\2\2\u0085\u0092\3\2\2\2\u0086\u0087\7 \2\2\u0087\u0088\7\f\2\2\u0088"+
-		"\u0089\5\16\b\2\u0089\u008a\5\22\n\2\u008a\u008b\7\r\2\2\u008b\u008c\7"+
-		"!\2\2\u008c\u008d\7\n\2\2\u008d\u008e\5\b\5\2\u008e\u008f\7\13\2\2\u008f"+
+		"\2\2\2qa\3\2\2\2qp\3\2\2\2r\21\3\2\2\2st\7\37\2\2tu\7\f\2\2uv\5\16\b\2"+
+		"vw\7\r\2\2wx\7 \2\2xy\7\n\2\2yz\5\b\5\2z{\7\13\2\2{\u0092\3\2\2\2|}\7"+
+		"\37\2\2}~\7\f\2\2~\177\5\16\b\2\177\u0080\5\20\t\2\u0080\u0081\7\r\2\2"+
+		"\u0081\u0082\7 \2\2\u0082\u0083\7\n\2\2\u0083\u0084\5\b\5\2\u0084\u0085"+
+		"\7\13\2\2\u0085\u0092\3\2\2\2\u0086\u0087\7\37\2\2\u0087\u0088\7\f\2\2"+
+		"\u0088\u0089\5\16\b\2\u0089\u008a\5\22\n\2\u008a\u008b\7\r\2\2\u008b\u008c"+
+		"\7 \2\2\u008c\u008d\7\n\2\2\u008d\u008e\5\b\5\2\u008e\u008f\7\13\2\2\u008f"+
 		"\u0092\3\2\2\2\u0090\u0092\7\2\2\3\u0091s\3\2\2\2\u0091|\3\2\2\2\u0091"+
-		"\u0086\3\2\2\2\u0091\u0090\3\2\2\2\u0092\23\3\2\2\2\u0093\u0094\7\21\2"+
-		"\2\u0094\u0095\7\16\2\2\u0095\u0098\5\24\13\2\u0096\u0098\7\21\2\2\u0097"+
-		"\u0093\3\2\2\2\u0097\u0096\3\2\2\2\u0098\25\3\2\2\2\u0099\u009a\7\"\2"+
-		"\2\u009a\u009b\7\n\2\2\u009b\u009c\5\24\13\2\u009c\u009d\7\13\2\2\u009d"+
+		"\u0086\3\2\2\2\u0091\u0090\3\2\2\2\u0092\23\3\2\2\2\u0093\u0094\7\20\2"+
+		"\2\u0094\u0095\7\16\2\2\u0095\u0098\5\24\13\2\u0096\u0098\7\20\2\2\u0097"+
+		"\u0093\3\2\2\2\u0097\u0096\3\2\2\2\u0098\25\3\2\2\2\u0099\u009a\7!\2\2"+
+		"\u009a\u009b\7\n\2\2\u009b\u009c\5\24\13\2\u009c\u009d\7\13\2\2\u009d"+
 		"\u009e\7\b\2\2\u009e\27\3\2\2\2\u009f\u00a0\t\3\2\2\u00a0\31\3\2\2\2\u00a1"+
-		"\u00a2\7#\2\2\u00a2\u00a3\7\n\2\2\u00a3\u00a4\5\30\r\2\u00a4\u00a5\7\13"+
-		"\2\2\u00a5\u00a6\7\b\2\2\u00a6\33\3\2\2\2\u00a7\u00a8\5\26\f\2\u00a8\u00a9"+
-		"\5\34\17\2\u00a9\u00b8\3\2\2\2\u00aa\u00ab\5\32\16\2\u00ab\u00ac\5\34"+
-		"\17\2\u00ac\u00b8\3\2\2\2\u00ad\u00ae\5\n\6\2\u00ae\u00af\5\34\17\2\u00af"+
-		"\u00b8\3\2\2\2\u00b0\u00b1\5\20\t\2\u00b1\u00b2\5\34\17\2\u00b2\u00b8"+
-		"\3\2\2\2\u00b3\u00b4\5\22\n\2\u00b4\u00b5\5\34\17\2\u00b5\u00b8\3\2\2"+
-		"\2\u00b6\u00b8\7\2\2\3\u00b7\u00a7\3\2\2\2\u00b7\u00aa\3\2\2\2\u00b7\u00ad"+
-		"\3\2\2\2\u00b7\u00b0\3\2\2\2\u00b7\u00b3\3\2\2\2\u00b7\u00b6\3\2\2\2\u00b8"+
-		"\35\3\2\2\2\u00b9\u00ba\7\17\2\2\u00ba\u00bb\7\20\2\2\u00bb\u00bc\7\f"+
-		"\2\2\u00bc\u00bd\5\f\7\2\u00bd\u00be\7\30\2\2\u00be\u00bf\5\34\17\2\u00bf"+
-		"\u00c0\7\r\2\2\u00c0\37\3\2\2\2\n%=LUq\u0091\u0097\u00b7";
+		"\u00a2\7\"\2\2\u00a2\u00a3\7\n\2\2\u00a3\u00a4\5\30\r\2\u00a4\u00a5\7"+
+		"\13\2\2\u00a5\u00a6\7\b\2\2\u00a6\33\3\2\2\2\u00a7\u00a8\5\26\f\2\u00a8"+
+		"\u00a9\5\34\17\2\u00a9\u00b8\3\2\2\2\u00aa\u00ab\5\32\16\2\u00ab\u00ac"+
+		"\5\34\17\2\u00ac\u00b8\3\2\2\2\u00ad\u00ae\5\n\6\2\u00ae\u00af\5\34\17"+
+		"\2\u00af\u00b8\3\2\2\2\u00b0\u00b1\5\20\t\2\u00b1\u00b2\5\34\17\2\u00b2"+
+		"\u00b8\3\2\2\2\u00b3\u00b4\5\22\n\2\u00b4\u00b5\5\34\17\2\u00b5\u00b8"+
+		"\3\2\2\2\u00b6\u00b8\7\2\2\3\u00b7\u00a7\3\2\2\2\u00b7\u00aa\3\2\2\2\u00b7"+
+		"\u00ad\3\2\2\2\u00b7\u00b0\3\2\2\2\u00b7\u00b3\3\2\2\2\u00b7\u00b6\3\2"+
+		"\2\2\u00b8\35\3\2\2\2\u00b9\u00ba\7\30\2\2\u00ba\u00bb\7\17\2\2\u00bb"+
+		"\u00bc\7\f\2\2\u00bc\u00bd\5\f\7\2\u00bd\u00be\7\27\2\2\u00be\u00bf\5"+
+		"\34\17\2\u00bf\u00c0\7\r\2\2\u00c0\37\3\2\2\2\n%=LUq\u0091\u0097\u00b7";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

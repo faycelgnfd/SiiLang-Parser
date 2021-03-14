@@ -1,195 +1,195 @@
-// Generated from C:/Users/Dell/IdeaProjects/Tiny_SII/src\grammaire.g4 by ANTLR 4.9
+// Generated from C:/Users/Dell/OneDrive/Bureau/LKSC/USTHB/S7/Compile/Projet/SiiLang-Parser/src\Tiny_SII.g4 by ANTLR 4.9
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link grammaireListener},
+ * This class provides an empty implementation of {@link Tiny_SIIListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
-public class grammaireBaseListener implements grammaireListener {
+public class Tiny_SIIBaseListener implements Tiny_SIIListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOperande(grammaireParser.OperandeContext ctx) { }
+	@Override public void enterOperande(Tiny_SIIParser.OperandeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOperande(grammaireParser.OperandeContext ctx) { }
+	@Override public void exitOperande(Tiny_SIIParser.OperandeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterComparateur(grammaireParser.ComparateurContext ctx) { }
+	@Override public void enterComparateur(Tiny_SIIParser.ComparateurContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitComparateur(grammaireParser.ComparateurContext ctx) { }
+	@Override public void exitComparateur(Tiny_SIIParser.ComparateurContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(grammaireParser.ExpressionContext ctx) { }
+	@Override public void enterExpression(Tiny_SIIParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(grammaireParser.ExpressionContext ctx) { }
+	@Override public void exitExpression(Tiny_SIIParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterComparaison(grammaireParser.ComparaisonContext ctx) { }
+	@Override public void enterComparaison(Tiny_SIIParser.ComparaisonContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitComparaison(grammaireParser.ComparaisonContext ctx) { }
+	@Override public void exitComparaison(Tiny_SIIParser.ComparaisonContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAffect(grammaireParser.AffectContext ctx) { }
+	@Override public void enterAffect(Tiny_SIIParser.AffectContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAffect(grammaireParser.AffectContext ctx) { }
+	@Override public void exitAffect(Tiny_SIIParser.AffectContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDecvar(grammaireParser.DecvarContext ctx) { }
+	@Override public void enterDecvar(Tiny_SIIParser.DecvarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDecvar(grammaireParser.DecvarContext ctx) { }
+	@Override public void exitDecvar(Tiny_SIIParser.DecvarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDakhel(grammaireParser.DakhelContext ctx) { }
+	@Override public void enterDakhel(Tiny_SIIParser.DakhelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDakhel(grammaireParser.DakhelContext ctx) { }
+	@Override public void exitDakhel(Tiny_SIIParser.DakhelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSi(grammaireParser.SiContext ctx) { }
+	@Override public void enterSi(Tiny_SIIParser.SiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSi(grammaireParser.SiContext ctx) { }
+	@Override public void exitSi(Tiny_SIIParser.SiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTantque(grammaireParser.TantqueContext ctx) { }
+	@Override public void enterTantque(Tiny_SIIParser.TantqueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTantque(grammaireParser.TantqueContext ctx) { }
+	@Override public void exitTantque(Tiny_SIIParser.TantqueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDakhellecture(grammaireParser.DakhellectureContext ctx) { }
+	@Override public void enterDakhellecture(Tiny_SIIParser.DakhellectureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDakhellecture(grammaireParser.DakhellectureContext ctx) { }
+	@Override public void exitDakhellecture(Tiny_SIIParser.DakhellectureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLecture(grammaireParser.LectureContext ctx) { }
+	@Override public void enterLecture(Tiny_SIIParser.LectureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLecture(grammaireParser.LectureContext ctx) { }
+	@Override public void exitLecture(Tiny_SIIParser.LectureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDakhelecriture(grammaireParser.DakhelecritureContext ctx) { }
+	@Override public void enterDakhelecriture(Tiny_SIIParser.DakhelecritureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDakhelecriture(grammaireParser.DakhelecritureContext ctx) { }
+	@Override public void exitDakhelecriture(Tiny_SIIParser.DakhelecritureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEcriture(grammaireParser.EcritureContext ctx) { }
+	@Override public void enterEcriture(Tiny_SIIParser.EcritureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEcriture(grammaireParser.EcritureContext ctx) { }
+	@Override public void exitEcriture(Tiny_SIIParser.EcritureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInstruction(grammaireParser.InstructionContext ctx) { }
+	@Override public void enterInstruction(Tiny_SIIParser.InstructionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInstruction(grammaireParser.InstructionContext ctx) { }
+	@Override public void exitInstruction(Tiny_SIIParser.InstructionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgramme(grammaireParser.ProgrammeContext ctx) { }
+	@Override public void enterProgramme(Tiny_SIIParser.ProgrammeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgramme(grammaireParser.ProgrammeContext ctx) { }
+	@Override public void exitProgramme(Tiny_SIIParser.ProgrammeContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

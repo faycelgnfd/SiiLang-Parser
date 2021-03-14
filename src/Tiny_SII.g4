@@ -48,3 +48,5 @@ instruction : lecture instruction| ecriture instruction|
 affect instruction| si instruction| tantque instruction| EOF;
 
 programme : Compil PROGID '{' decvar Start instruction '}';
+
+// end
