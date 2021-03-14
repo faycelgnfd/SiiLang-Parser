@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SiiLang Parser.iml" filepath="$PROJECT_DIR$/SiiLang Parser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tiny_SII.iml" filepath="$PROJECT_DIR$/Tiny_SII.iml" />
     </modules>
   </component>
 </project>
