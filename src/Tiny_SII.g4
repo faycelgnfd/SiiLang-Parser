@@ -1,4 +1,4 @@
-grammar grammaire;
+grammar Tiny_SII;
 
 tokens { Start, Compil, IntCompil, FloatCompil, StringCompil, If, Then,
 Else, Do, While, ScanCompile, PrintCompil }
