@@ -1,0 +1,3 @@
+intCompil x;
+floatCompil y;
+stringCompil z;
