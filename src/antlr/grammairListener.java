@@ -77,15 +77,25 @@ public interface grammairListener extends ParseTreeListener {
 	 */
 	void exitDecvar(grammairParser.DecvarContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link grammairParser#dakhel}.
+	 * Enter a parse tree produced by {@link grammairParser#inside}.
 	 * @param ctx the parse tree
 	 */
-	void enterDakhel(grammairParser.DakhelContext ctx);
+	void enterInside(grammairParser.InsideContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link grammairParser#dakhel}.
+	 * Exit a parse tree produced by {@link grammairParser#inside}.
 	 * @param ctx the parse tree
 	 */
-	void exitDakhel(grammairParser.DakhelContext ctx);
+	void exitInside(grammairParser.InsideContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link grammairParser#sinon}.
+	 * @param ctx the parse tree
+	 */
+	void enterSinon(grammairParser.SinonContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link grammairParser#sinon}.
+	 * @param ctx the parse tree
+	 */
+	void exitSinon(grammairParser.SinonContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link grammairParser#si}.
 	 * @param ctx the parse tree

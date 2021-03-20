@@ -99,13 +99,25 @@ public class grammairBaseListener implements grammairListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDakhel(grammairParser.DakhelContext ctx) { }
+	@Override public void enterInside(grammairParser.InsideContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDakhel(grammairParser.DakhelContext ctx) { }
+	@Override public void exitInside(grammairParser.InsideContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSinon(grammairParser.SinonContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSinon(grammairParser.SinonContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

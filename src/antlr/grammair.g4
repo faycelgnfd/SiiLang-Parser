@@ -18,20 +18,20 @@ START : 'start' ;
 COMPIL : 'compil' ;
 
 //lexical
+COM : '//'~[\r\n]* -> skip;
+COMLIGNES : '/''*'WHATEVER'*''/' -> skip;
 PROGID : [A-Z]+; //Nom de programme
 ID : [a-zA-Z][a-zA-Z0-9]*; //identificateurs
 NBR : [0-9]+; //nombre entier
 NBRN : '-'[1-9]+; //nombre entier negatif
 WS : [ \t\n\r] -> skip;
 WHATEVER : [.]*;
-COM : '/''/' ~[\r\n] -> skip;
-COMLIGNES : '/''*'WHATEVER'*''/' -> skip;
 PV : ';' ;
 VIR : ',' ;
 PT : '.' ;
 AFF : '=' ;
 O_PAR : '(' ;
-C_PAR : ')' ;
+F_PAR : ')' ;
 O_ACOL : '{' ;
 F_ACOL : '}' ;
 INF : '<' ;
@@ -48,7 +48,7 @@ operande
 		: NBR
 		| NBR'.'NBRN
 		| ID
-		| O_PAR NBRN C_PAR
+		| O_PAR NBRN F_PAR
 		;
 
 
@@ -81,19 +81,31 @@ affect
 decvar
 			: (INT_TYPE | FLOAT_TYPE | STRING_TYPE) ID PV decvar
 			| /* epsilon */
-			| EOF
 			;
 
-dakhel : expression dakhel| affect dakhel| EOF;
+// ce qui peut etre à l'interieur d'un block si
+inside
+			: affect inside
+			| si inside 
+			| EOF
+			| /* epsilon */
+			;
 
-//si sinon
-si : IF '('comparaison')' THEN '{' dakhel si '}'|
-IF '('comparaison')' THEN '{' dakhel si '}' ELSE '{' dakhel si '}' | EOF ;
+sinon
+			: ELSE O_ACOL inside F_ACOL
+			|
+			;
+
+//si
+si
+			: IF O_PAR comparaison F_PAR THEN O_ACOL inside F_ACOL sinon
+			;
+			
 
 //do - while
-tantque : DO '{' dakhel '}' WHILE '('comparaison')'|
-DO '{' dakhel si'}' WHILE '('comparaison')'|
-DO '{' dakhel tantque'}' WHILE '('comparaison')'| EOF ;
+tantque : DO '{' inside '}' WHILE '('comparaison')'|
+DO '{' inside si'}' WHILE '('comparaison')'|
+DO '{' inside tantque'}' WHILE '('comparaison')'| EOF ;
 
 dakhellecture : ID ',' dakhellecture | ID ;
 lecture : SCANCOMPIL '(' dakhellecture ')' ';' ;
