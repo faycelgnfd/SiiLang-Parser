@@ -1,7 +1,6 @@
 grammar grammair;
 
-/*tokens { Start, Compil, IntCompil, FloatCompil, StringCompil, If, Then,
-Else, Do, While, ScanCompil, PrintCompil }*/
+//lexer : 
 
 //Keywords
 INT_TYPE : 'intCompil' ;
@@ -17,15 +16,15 @@ PRINTCOMPIL : 'printCompil' ;
 START : 'start' ;
 COMPIL : 'compil' ;
 
-//lexical
+//autre entitées lexicales
 COM : '//'~[\r\n]* -> skip;
-COMLIGNES : '/''*'WHATEVER'*''/' -> skip;
+COMLIGNES : '/*' .*? '*/' -> skip;
 PROGID : [A-Z]+; //Nom de programme
 ID : [a-zA-Z][a-zA-Z0-9]*; //identificateurs
+STRING : '"' (~[\r\n"] | '""')* '"' ; 
 NBR : [0-9]+; //nombre entier
 NBRN : '-'[1-9]+; //nombre entier negatif
 WS : [ \t\n\r] -> skip;
-WHATEVER : [.]*;
 PV : ';' ;
 VIR : ',' ;
 PT : '.' ;
@@ -42,8 +41,9 @@ PLUS : '+' ;
 SUB : '-' ;
 MUL : '*' ;
 DIV : '/' ;
+DBQUOTE : '"' ;
 
-//syntax
+//parser
 operande
 		: NBR
 		| NBR'.'NBRN
@@ -83,17 +83,17 @@ decvar
 			| /* epsilon */
 			;
 
-// ce qui peut etre à l'interieur d'un block si
+// ce qui peut etre à l'interieur d'un block if ou do-while
 inside
 			: affect inside
 			| si inside 
-			| EOF
+			| tantque inside
 			| /* epsilon */
 			;
 
 sinon
 			: ELSE O_ACOL inside F_ACOL
-			|
+			| /* epsilon */
 			;
 
 //si
@@ -103,21 +103,39 @@ si
 			
 
 //do - while
-tantque : DO '{' inside '}' WHILE '('comparaison')'|
-DO '{' inside si'}' WHILE '('comparaison')'|
-DO '{' inside tantque'}' WHILE '('comparaison')'| EOF ;
+tantque
+			: DO O_ACOL inside F_ACOL WHILE O_PAR comparaison F_PAR
+			;
 
-dakhellecture : ID ',' dakhellecture | ID ;
-lecture : SCANCOMPIL '(' dakhellecture ')' ';' ;
+insidelecture
+			: ID VIR insidelecture
+			| ID 
+			;
 
-dakhelecriture : WHATEVER | ID ;
-ecriture : PRINTCOMPIL '(' dakhelecriture ')' ';' ;
+lecture
+			: SCANCOMPIL O_PAR insidelecture F_PAR PV
+			;
 
-instruction : lecture instruction| ecriture instruction|
-affect instruction| si instruction| tantque instruction| EOF ;
+insideecriture
+			: STRING 
+			| insidelecture
+			;
+			
+ecriture
+			: PRINTCOMPIL O_PAR insideecriture F_PAR PV
+			;
+
+instruction
+			: lecture instruction
+			| ecriture instruction
+			| affect instruction
+			| si instruction
+			| tantque instruction
+			| /* epsilon */
+			;
 
 
-programme : COMPIL  PROGID '{' decvar START '}' EOF;
+programme : COMPIL PROGID O_ACOL decvar START instruction F_ACOL EOF;
 
 
 

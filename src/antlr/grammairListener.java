@@ -117,15 +117,15 @@ public interface grammairListener extends ParseTreeListener {
 	 */
 	void exitTantque(grammairParser.TantqueContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link grammairParser#dakhellecture}.
+	 * Enter a parse tree produced by {@link grammairParser#insidelecture}.
 	 * @param ctx the parse tree
 	 */
-	void enterDakhellecture(grammairParser.DakhellectureContext ctx);
+	void enterInsidelecture(grammairParser.InsidelectureContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link grammairParser#dakhellecture}.
+	 * Exit a parse tree produced by {@link grammairParser#insidelecture}.
 	 * @param ctx the parse tree
 	 */
-	void exitDakhellecture(grammairParser.DakhellectureContext ctx);
+	void exitInsidelecture(grammairParser.InsidelectureContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link grammairParser#lecture}.
 	 * @param ctx the parse tree
@@ -137,15 +137,15 @@ public interface grammairListener extends ParseTreeListener {
 	 */
 	void exitLecture(grammairParser.LectureContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link grammairParser#dakhelecriture}.
+	 * Enter a parse tree produced by {@link grammairParser#insideecriture}.
 	 * @param ctx the parse tree
 	 */
-	void enterDakhelecriture(grammairParser.DakhelecritureContext ctx);
+	void enterInsideecriture(grammairParser.InsideecritureContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link grammairParser#dakhelecriture}.
+	 * Exit a parse tree produced by {@link grammairParser#insideecriture}.
 	 * @param ctx the parse tree
 	 */
-	void exitDakhelecriture(grammairParser.DakhelecritureContext ctx);
+	void exitInsideecriture(grammairParser.InsideecritureContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link grammairParser#ecriture}.
 	 * @param ctx the parse tree

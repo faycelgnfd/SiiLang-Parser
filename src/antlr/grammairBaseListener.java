@@ -147,13 +147,13 @@ public class grammairBaseListener implements grammairListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDakhellecture(grammairParser.DakhellectureContext ctx) { }
+	@Override public void enterInsidelecture(grammairParser.InsidelectureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDakhellecture(grammairParser.DakhellectureContext ctx) { }
+	@Override public void exitInsidelecture(grammairParser.InsidelectureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -171,13 +171,13 @@ public class grammairBaseListener implements grammairListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDakhelecriture(grammairParser.DakhelecritureContext ctx) { }
+	@Override public void enterInsideecriture(grammairParser.InsideecritureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDakhelecriture(grammairParser.DakhelecritureContext ctx) { }
+	@Override public void exitInsideecriture(grammairParser.InsideecritureContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
