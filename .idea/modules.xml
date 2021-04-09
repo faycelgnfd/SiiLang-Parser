@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tiny_SII.iml" filepath="$PROJECT_DIR$/Tiny_SII.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/openjfx-11.0.2_windows-x64_bin-sdk/openjfx-11.0.2_windows-x64_bin-sdk.iml" filepath="$USER_HOME$/Downloads/openjfx-11.0.2_windows-x64_bin-sdk/openjfx-11.0.2_windows-x64_bin-sdk.iml" />
     </modules>
   </component>
 </project>

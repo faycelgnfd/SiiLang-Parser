@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5146dc4-4e94-4b52-a169-2ec73487fcb1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gen/Tiny_SII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gen/semantic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/Tiny_SIICustomListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/Tiny_SIICustomListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tiny_SII.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tiny_SII.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tiny_SII.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tiny_SII.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/grammairBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/grammairBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/grammairLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/grammairLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/grammairListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/grammairListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/grammairParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/grammairParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +40,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/antlr" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="antlr" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\OneDrive\Bureau\LKSC\USTHB\S7\Compile\Projet\SiiLang-Parser\src\antlr" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Tiny_SII" type="Application" factoryName="Application">
@@ -69,6 +84,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
