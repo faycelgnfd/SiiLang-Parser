@@ -12,12 +12,23 @@ public class semantic extends grammaireBaseListener{
      * of the given code.
      */
 
-    // When an error is detected, we will add a warning to the list of errors
+    // Si une erreur est détectée elle sera ajoutée a la liste errors
     private LinkedList<String> errors = new LinkedList<>();
     private int nbr_erreur=0;
-    //If no error is detected after an instruction, we will update the Table
-    private TableDesSymboles table=new TableDesSymboles();
+    private String message_erreur;
+    private LinkedList<String> result_exp=new LinkedList();
+    private LinkedList<Integer> types=new LinkedList();
 
+    //Si aucune erreur n'est détéctée on met à jour la TS
+    private TableDesSymboles table=TableDesSymboles.getInstance();
+
+    public boolean compatible(int a,int b){
+        boolean compatibilite=true;
+        if (a==0){ if(a!=0) compatibilite=false }
+        else if (a==1){if(b==2) compatibilite=false;}
+                else if(a==2){if(b!=2) compatibilite= false;}
+                return compatibilite;
+    }
     public void enterAffect(grammairParser.AffectContext ctx) { }
 
     // AFFECTATION
@@ -31,14 +42,17 @@ public class semantic extends grammaireBaseListener{
         else {
             //vérifier la compatibilité des types
             int type_var= (table.getElement(name)).typeElem;
-            int type_affect= 0; //extraire le type d'une operation
+            int type_affect= types.getlast(); //extraire le type d'une operation
             if( !compatible(type_var,type_affect)){
                 message_erreur="operation d'affectation sur types non compatibles";
                 errors.add(message_erreur);
             }
             else {
                 // il ny a pas de problème alors on réalise l'affectation
-                (table.getElement(name)).val= ctx.operande().getText();
+                String x;
+                if(ctx.operande()!=null){x=ctx.operande().getText();}
+                if(ctx.expression()!=null){x=result_exp.getlast();}
+                (table.getElement(name)).val= x;
             }
         }
     }
@@ -67,7 +81,11 @@ public class semantic extends grammaireBaseListener{
     @Override public void exitExpression(grammairParser.ExpressionContext ctx) {
         op=ctx.operateur().getText();
         switch (op){
-            case "/": break;
+            case "/": if(ctx.operande().getText()=="0"){
+                message_erreur="division par 0 "name;
+                errors.add(message_erreur);
+            }
+                break;
             case "+": break;
             case "*": break;
             case "-": break;

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a5146dc4-4e94-4b52-a169-2ec73487fcb1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen/grammair.g4" beforeDir="false" afterPath="$PROJECT_DIR$/gen/grammair.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gen/semantic.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/semantic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
