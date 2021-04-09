@@ -75,7 +75,8 @@ comparaison
 			;
 
 affect
-			: (ID AFF expression | ID AFF operande) PV
+			: (ID AFF expression |
+			ID AFF operande) PV
 			;
 
 decvar
