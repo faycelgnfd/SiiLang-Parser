@@ -67,11 +67,19 @@ operateur
 			;
 
 expression
-			: operande operateur operande
+			: operande operateur endExp
+			;
+			
+endExp
+			: operande
 			;
 
 comparaison
-			: operande comparateur operande
+			: operande comparateur endComp
+			;
+
+endComp
+			:operande
 			;
 
 affect

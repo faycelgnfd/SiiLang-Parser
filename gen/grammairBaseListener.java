@@ -63,6 +63,18 @@ public class grammairBaseListener implements grammairListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterEndExp(grammairParser.EndExpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEndExp(grammairParser.EndExpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterComparaison(grammairParser.ComparaisonContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -70,6 +82,18 @@ public class grammairBaseListener implements grammairListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitComparaison(grammairParser.ComparaisonContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterEndComp(grammairParser.EndCompContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEndComp(grammairParser.EndCompContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

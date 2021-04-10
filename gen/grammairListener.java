@@ -47,6 +47,16 @@ public interface grammairListener extends ParseTreeListener {
 	 */
 	void exitExpression(grammairParser.ExpressionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link grammairParser#endExp}.
+	 * @param ctx the parse tree
+	 */
+	void enterEndExp(grammairParser.EndExpContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link grammairParser#endExp}.
+	 * @param ctx the parse tree
+	 */
+	void exitEndExp(grammairParser.EndExpContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link grammairParser#comparaison}.
 	 * @param ctx the parse tree
 	 */
@@ -56,6 +66,16 @@ public interface grammairListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitComparaison(grammairParser.ComparaisonContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link grammairParser#endComp}.
+	 * @param ctx the parse tree
+	 */
+	void enterEndComp(grammairParser.EndCompContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link grammairParser#endComp}.
+	 * @param ctx the parse tree
+	 */
+	void exitEndComp(grammairParser.EndCompContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link grammairParser#affect}.
 	 * @param ctx the parse tree

@@ -83,7 +83,7 @@ public class semantic extends grammairBaseListener{
     @Override public void exitExpression(grammairParser.ExpressionContext ctx) {
         String op=ctx.operateur().getText();
         switch (op){
-            case "/": if(ctx.operande().toString()=="0"){
+            case "/": if(ctx.endExp().operande().getText()=="0"){
                 message_erreur="division par 0 ";
                 errors.add(message_erreur);
             }
