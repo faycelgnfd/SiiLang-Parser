@@ -93,6 +93,18 @@ public class semantic extends grammaireBaseListener{
 
     }
 
+
+    @Override public void exitLecture(grammairParser.LectureContext ctx) {
+        String name=ctx.ID().getText();
+        //vérifier si la variable a été declarée
+        if(!table.existElement(name)) {
+            message_erreur="operation d'ecriture sur variable non declarée :+"name;
+            errors.add(message_erreur);
+        }
+        // mettre à jour TS
+
+    }
+
     // AFFICHAGE DE DEBUT DE PROGRAMME
     @Override public void enterProgramme(grammairParser.ProgrammeContext ctx) {
         System.out.println("Analyse sémantique");
