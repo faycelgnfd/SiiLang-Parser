@@ -68,6 +68,7 @@ operateur
 
 expression
 			: operande operateur endExp
+			| expression operateur endExp
 			;
 			
 endExp
@@ -83,8 +84,7 @@ endComp
 			;
 
 affect
-			: (ID AFF expression |
-			ID AFF operande) PV
+			: (ID AFF expression |ID AFF operande) PV
 			;
 
 decvar

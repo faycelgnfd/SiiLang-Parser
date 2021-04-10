@@ -9,9 +9,10 @@ public class Quads {
 		quads = new LinkedList<Quad>();
 	}
 	
-	public void ajouterQuad(String ch1, String ch2, String ch3, String ch4)
+	public int ajouterQuad(String ch1, String ch2, String ch3, String ch4)
 	{
 		quads.add(new Quad(ch1,ch2,ch3,ch4));
+		return this.tailleQuads()-1;
 	}
 	
 	public Quad getQuad(int i)
@@ -25,9 +26,10 @@ public class Quads {
 	}
 	
 	//surcharge
-	public void ajouterQuad(Quad quad)
+	public int ajouterQuad(Quad quad)
 	{
 		quads.add(quad);
+		return this.tailleQuads()-1;
 	}
 
 }

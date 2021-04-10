@@ -121,6 +121,11 @@ public class semantic extends grammairBaseListener{
                 { System.out.println(errors.get(i));}
         }
     }
+    
+    public int getNbErrors()
+    {
+    	return this.nbr_erreur;
+    }
 
 
 
