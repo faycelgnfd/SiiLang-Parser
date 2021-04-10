@@ -29,13 +29,15 @@ public class semantic extends grammairBaseListener{
                 else if(a==2){if(b!=2) compatibilite= false;}
                 return compatibilite;
     }
+    
     public void enterAffect(grammairParser.AffectContext ctx) { }
 
     // AFFECTATION
     public void exitAffect(grammairParser.AffectContext ctx) {
         String name=ctx.ID().getText();
         //vérifier si la variable a été declarée
-        if(!table.existElement(name)) {
+        if(!table.existElement(name))
+        {
             message_erreur="operation d'affectation sur variable non declarée :"+name;
             errors.add(message_erreur);
         }
@@ -49,7 +51,7 @@ public class semantic extends grammairBaseListener{
             }
             else {
                 // il ny a pas de problème alors on réalise l'affectation
-                String x;
+                String x = null;
                 if(ctx.operande()!=null){x=ctx.operande().getText();}
                 if(ctx.expression()!=null){x=result_exp.getLast();}
                 (table.getElement(name)).val= x;
@@ -60,7 +62,7 @@ public class semantic extends grammairBaseListener{
     // DECLARATION DE VARIABLES
     @Override public void exitDecvar(grammairParser.DecvarContext ctx) {
         String name=ctx.ID().getText();
-        int x,y;
+        int x=0,y=0;
         // vérifier que la variable n'a pas déjà été declaré
         if(table.existElement(name)) {
             message_erreur="variable déjà declarée :"+name;
@@ -79,10 +81,10 @@ public class semantic extends grammairBaseListener{
 
     // EVALUATION D'EXPRESSION
     @Override public void exitExpression(grammairParser.ExpressionContext ctx) {
-        op=ctx.operateur().getText();
+        String op=ctx.operateur().getText();
         switch (op){
-            case "/": if(ctx.operande().getText()=="0"){
-                message_erreur="division par 0 "name;
+            case "/": if(ctx.operande().toString()=="0"){
+                message_erreur="division par 0 ";
                 errors.add(message_erreur);
             }
                 break;
@@ -102,7 +104,7 @@ public class semantic extends grammairBaseListener{
     @Override public void exitProgramme(grammairParser.ProgrammeContext ctx) {
         int i;
         if(nbr_erreur==0){System.out.println("Programme correcte");}
-          else{ System.out.println("erreurs du programme:")
+          else{ System.out.println("erreurs du programme:");
                 for(i=0;i<errors.size();i++)
                 { System.out.println(errors.get(i));}
         }
