@@ -3,8 +3,8 @@
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
-
-public class semantic extends grammaireBaseListener{
+import java.util.LinkedList;
+public class semantic extends grammairBaseListener{
 
     /**
      * This class provides an  implementation of {@link grammairListener},
@@ -24,7 +24,7 @@ public class semantic extends grammaireBaseListener{
 
     public boolean compatible(int a,int b){
         boolean compatibilite=true;
-        if (a==0){ if(a!=0) compatibilite=false }
+        if (a==0){ if(a!=0) compatibilite=false; }
         else if (a==1){if(b==2) compatibilite=false;}
                 else if(a==2){if(b!=2) compatibilite= false;}
                 return compatibilite;
@@ -36,13 +36,13 @@ public class semantic extends grammaireBaseListener{
         String name=ctx.ID().getText();
         //vérifier si la variable a été declarée
         if(!table.existElement(name)) {
-            message_erreur="operation d'affectation sur variable non declarée :+"name;
+            message_erreur="operation d'affectation sur variable non declarée :"+name;
             errors.add(message_erreur);
         }
         else {
             //vérifier la compatibilité des types
             int type_var= (table.getElement(name)).typeElem;
-            int type_affect= types.getlast(); //extraire le type d'une operation
+            int type_affect= types.getLast(); //extraire le type d'une operation
             if( !compatible(type_var,type_affect)){
                 message_erreur="operation d'affectation sur types non compatibles";
                 errors.add(message_erreur);
@@ -51,7 +51,7 @@ public class semantic extends grammaireBaseListener{
                 // il ny a pas de problème alors on réalise l'affectation
                 String x;
                 if(ctx.operande()!=null){x=ctx.operande().getText();}
-                if(ctx.expression()!=null){x=result_exp.getlast();}
+                if(ctx.expression()!=null){x=result_exp.getLast();}
                 (table.getElement(name)).val= x;
             }
         }
@@ -63,7 +63,7 @@ public class semantic extends grammaireBaseListener{
         int x,y;
         // vérifier que la variable n'a pas déjà été declaré
         if(table.existElement(name)) {
-            message_erreur="variable déjà declarée :+"name;
+            message_erreur="variable déjà declarée :"+name;
             errors.add(message_erreur);
         }
         else {
