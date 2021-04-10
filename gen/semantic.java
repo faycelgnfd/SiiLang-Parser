@@ -96,11 +96,11 @@ public class semantic extends grammairBaseListener{
     }
 
 
-    @Override public void exitLecture(grammairParser.LectureContext ctx) {
+    @Override public void exitInsidelecture(grammairParser.InsidelectureContext ctx){
         String name=ctx.ID().getText();
         //vérifier si la variable a été declarée
         if(!table.existElement(name)) {
-            message_erreur="operation d'ecriture sur variable non declarée :+"name;
+            message_erreur="operation d'ecriture sur variable non declarée :"+name;
             errors.add(message_erreur);
         }
         // mettre à jour TS
